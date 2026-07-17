@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "purgatory",
+  "version": "${version}",
+  "name": "Purgatory",
+  "description": "W3LC0M3 T0 TH3 PURG@T0RY!",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/purgatory/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.sabio.purgatory.client.PurgatoryClient"
+    ],
+    "main": [
+      "net.sabio.purgatory.Purgatory"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
