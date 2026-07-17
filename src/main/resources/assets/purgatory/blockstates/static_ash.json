@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "purgatory:block/static_ash"
+    }
+  }
+}
