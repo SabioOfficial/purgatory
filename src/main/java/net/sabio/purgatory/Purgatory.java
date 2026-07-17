@@ -1,6 +1,7 @@
 package net.sabio.purgatory;
 
 import net.fabricmc.api.ModInitializer;
+import net.sabio.purgatory.mod.registry.ModBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,5 +11,6 @@ public class Purgatory implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModBlocks.initialize();
     }
 }
