@@ -15,11 +15,16 @@
     ],
     "main": [
       "net.sabio.purgatory.Purgatory"
+    ],
+    "terrablender": [
+      "net.sabio.purgatory.PurgatoryTerraBlender"
     ]
   },
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "java": ">=21",
+    "terrablender": "*"
   }
 }
