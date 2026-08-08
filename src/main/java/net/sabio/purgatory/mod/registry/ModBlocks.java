@@ -14,13 +14,14 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.sabio.purgatory.Purgatory;
+import net.sabio.purgatory.mod.block.StaticAshBlock;
 
 import java.util.function.Function;
 
 public class ModBlocks {
     public static final Block STATIC_ASH = register(
             "static_ash",
-            Block::new,
+            StaticAshBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).strength(0.3f).sound(SoundType.SAND).noOcclusion(),
             true
     );
