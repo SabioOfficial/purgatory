@@ -3,6 +3,7 @@ package net.sabio.purgatory;
 import net.fabricmc.api.ModInitializer;
 import net.sabio.purgatory.mod.registry.ModBlocks;
 import net.sabio.purgatory.mod.registry.ModItems;
+import net.sabio.purgatory.mod.world.PurgatoryBiomeEffects;
 import net.sabio.purgatory.mod.world.PurgatoryBiomes;
 import net.sabio.purgatory.mod.world.biome.PurgatoryBiomeSource;
 import org.slf4j.Logger;
@@ -18,5 +19,6 @@ public class Purgatory implements ModInitializer {
         ModBlocks.initialize();
         PurgatoryBiomes.register();
         PurgatoryBiomeSource.injectIntoOverworld();
+        PurgatoryBiomeEffects.register();
     }
 }
