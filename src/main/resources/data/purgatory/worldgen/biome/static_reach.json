@@ -10,7 +10,8 @@
   "carvers": [],
   "features": [
     [], [], [], [],
-    [], [], []
+    [], [], [], [], [],
+    ["purgatory:purged_tree"]
   ],
   "spawners": {
 
