@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.sabio.purgatory.Purgatory;
 import net.sabio.purgatory.mod.block.StaticAshBlock;
+import net.sabio.purgatory.mod.block.StrippedPurgedLogBlock;
 
 import java.util.function.Function;
 
@@ -30,7 +31,14 @@ public class ModBlocks {
     public static final Block PURGED_LOG = register(
             "purged_log",
             RotatedPillarBlock::new,
-            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(2.0f).sound(SoundType.WOOD),
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0f).sound(SoundType.WOOD),
+            true
+    );
+
+    public static final Block STRIPPED_PURGED_LOG = register(
+            "stripped_purged_log",
+            StrippedPurgedLogBlock::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(2.0f).sound(SoundType.WOOD),
             true
     );
 
@@ -63,10 +71,9 @@ public class ModBlocks {
     }
 
     public static void initialize() {
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> {
-            creativeTab.accept(ModBlocks.STATIC_ASH.asItem());
-        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> creativeTab.accept(ModBlocks.STRIPPED_PURGED_LOG.asItem()));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(ModBlocks.STATIC_ASH.asItem());
             creativeTab.accept(ModBlocks.PURGED_LOG.asItem());
         });
     }

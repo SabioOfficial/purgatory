@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "purgatory:block/stripped_purged_log"
+  }
+}

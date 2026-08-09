@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "purgatory:block/stripped_purged_log_top",
+    "side": "purgatory:block/stripped_purged_log"
+  }
+}
