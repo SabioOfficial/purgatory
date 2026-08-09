@@ -1,10 +1,23 @@
 package net.sabio.purgatory.client;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
+import net.minecraft.resources.Identifier;
+import net.sabio.purgatory.Purgatory;
+import net.sabio.purgatory.mod.network.EyePhasePayload;
 
 public class PurgatoryClient implements ClientModInitializer {
-
     @Override
     public void onInitializeClient() {
+        ClientPlayNetworking.registerGlobalReceiver(EyePhasePayload.TYPE, (payload, context) -> context.client().execute(() -> EyeHudRenderer.setPhase(payload.phase())));
+        ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> EyeHudRenderer.reset());
+        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> EyeHudRenderer.reset());
+
+        HudElementRegistry.addLast(
+                Identifier.fromNamespaceAndPath(Purgatory.MOD_ID, "eye_hud"),
+                EyeHudRenderer::render
+        );
     }
 }
