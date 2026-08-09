@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.sabio.purgatory.mod.network.EyePhasePayload;
 import net.sabio.purgatory.mod.registry.ModBlocks;
+import net.sabio.purgatory.mod.registry.ModEntityTypes;
 import net.sabio.purgatory.mod.registry.ModItems;
 import net.sabio.purgatory.mod.world.PurgatoryBiomeEffects;
 import net.sabio.purgatory.mod.world.PurgatoryBiomes;
@@ -27,5 +28,7 @@ public class Purgatory implements ModInitializer {
         StrippableBlockRegistry.register(ModBlocks.PURGED_LOG, ModBlocks.STRIPPED_PURGED_LOG);
         PayloadTypeRegistry.clientboundPlay().register(EyePhasePayload.TYPE, EyePhasePayload.CODEC);
         PurgatoryNoiseTracker.register();
+        ModEntityTypes.registerModEntityTypes();
+        ModEntityTypes.registerAttributes();
     }
 }
