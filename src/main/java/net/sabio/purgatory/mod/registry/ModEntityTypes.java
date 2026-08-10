@@ -10,6 +10,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.sabio.purgatory.Purgatory;
+import net.sabio.purgatory.mod.entity.HarasserEntity;
 import net.sabio.purgatory.mod.entity.StalkerEntity;
 
 public class ModEntityTypes {
@@ -18,6 +19,13 @@ public class ModEntityTypes {
             EntityType.Builder.of(StalkerEntity::new, MobCategory.MONSTER)
                     .sized(0.6f, 1.95f)
                     .clientTrackingRange(10)
+    );
+
+    public static final EntityType<HarasserEntity> HARASSER = register(
+            "harasser",
+            EntityType.Builder.of(HarasserEntity::new, MobCategory.MONSTER)
+                    .sized(0.5f, 1.5f)
+                    .clientTrackingRange(8)
     );
 
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {
@@ -31,5 +39,6 @@ public class ModEntityTypes {
 
     public static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(STALKER, StalkerEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(HARASSER, HarasserEntity.createAttributes());
     }
 }

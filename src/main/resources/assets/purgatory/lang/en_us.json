@@ -10,5 +10,6 @@
   "item.minecraft.splash_potion.effect.sin": "Splash Potion of Sin",
   "item.minecraft.lingering_potion.effect.sin": "Lingering Potion of Sin",
   "item.minecraft.lingering_potion.effect.fearful": "Fearful Lingering Potion",
-  "entity.purgatory.stalker": "Stalker"
+  "entity.purgatory.stalker": "Stalker",
+  "entity.purgatory.harasser": "Harasser"
 }

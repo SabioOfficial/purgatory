@@ -66,6 +66,7 @@ public class PurgatoryNoiseTracker {
                     ServerPlayNetworking.send(player, new EyePhasePayload(PHASE_HIDDEN));
                 }
                 PurgatoryStalkerManager.onPlayerRemoved(id);
+                PurgatoryHarasserManager.onPlayerRemoved(id);
                 noiseMeter.remove(id);
                 lastSentPhase.remove(id);
                 lastPosition.remove(id);
@@ -136,6 +137,7 @@ public class PurgatoryNoiseTracker {
             lastSentPhase.put(id, phase);
             ServerPlayNetworking.send(player, new EyePhasePayload(phase));
             PurgatoryStalkerManager.onPhaseChanged(player, phase);
+            PurgatoryHarasserManager.onPhaseChanged(player, phase);
         }
     }
 }
