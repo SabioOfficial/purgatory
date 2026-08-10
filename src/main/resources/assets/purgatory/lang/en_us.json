@@ -3,5 +3,6 @@
   "block.purgatory.purged_log": "Purged Log",
   "block.purgatory.stripped_purged_log": "Stripped Purged Log",
   "item.purgatory.sinful_dust": "Sinful Dust",
+  "item.minecraft.potion.effect.sin": "Potion of Sin",
   "entity.purgatory.stalker": "Stalker"
 }

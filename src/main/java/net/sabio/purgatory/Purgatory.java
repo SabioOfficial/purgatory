@@ -7,6 +7,7 @@ import net.sabio.purgatory.mod.network.EyePhasePayload;
 import net.sabio.purgatory.mod.registry.ModBlocks;
 import net.sabio.purgatory.mod.registry.ModEntityTypes;
 import net.sabio.purgatory.mod.registry.ModItems;
+import net.sabio.purgatory.mod.registry.ModPotions;
 import net.sabio.purgatory.mod.world.PurgatoryBiomeEffects;
 import net.sabio.purgatory.mod.world.PurgatoryBiomes;
 import net.sabio.purgatory.mod.world.PurgatoryNoiseTracker;
@@ -30,5 +31,6 @@ public class Purgatory implements ModInitializer {
         PurgatoryNoiseTracker.register();
         ModEntityTypes.registerModEntityTypes();
         ModEntityTypes.registerAttributes();
+        ModPotions.register();
     }
 }
