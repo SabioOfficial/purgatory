@@ -8,6 +8,7 @@ import net.sabio.purgatory.Purgatory;
 
 public class ModPotionIds {
     public static final ResourceKey<Potion> SIN_POTION = create("sin");
+    public static final ResourceKey<Potion> FEARFUL_POTION = create("fearful");
 
     private static ResourceKey<Potion> create(String name) {
         Identifier id = Identifier.fromNamespaceAndPath(Purgatory.MOD_ID, name);
